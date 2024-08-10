@@ -1,0 +1,64 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "GDB Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}", 
+            "args": [], 
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build", 
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            // "setupCommands": [
+                // {
+                    // "description": "Enable pretty-printing for gdb",
+                    // "text": "-enable-pretty-printing",
+                    // "ignoreFailures": true
+                // }
+            // ],
+            "logging": {
+                "trace": true, 
+                "traceResponse": true,
+                "engineLogging": true
+            },
+            "debugServerPath": "",
+            "targetArchitecture": "",
+            // "program": "${workspaceFolder}/path/to/your/program",
+            // "externalConsole": false,
+            // "preLaunchTask": "build", 
+            "postDebugTask": "",
+            "internalConsoleOptions": "openOnSessionStart",
+            "pipeTransport": null,
+            "sourceFileMap": {},
+            "windows": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "C:\\path\\to\\gdb.exe",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "linux": {
+                "MIMode": "gdb"
+            }
+        }
+    ]
+}
